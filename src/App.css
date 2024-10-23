@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+h1{
+  display: inline;
+  margin-top:1rem;
+}
+#verse{
+  color:rgb(75, 75, 246);
+}
+.header{
+ margin-top:1rem;
+}
+#image{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:3rem;
+}
+.loginCard{
+  margin:2.5rem;
+  box-shadow: 2px 2px 4px rgb(120, 120, 245);
+}
+h2{
+  color:rgb(75, 75, 246);
+}
+Button{
+  background-color:rgb(75, 75, 246) !important ;
+  color: #fff !important;
+  width: 100%;
+}
+.ant-btn span {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.footer{
+  background-color: #F5F5F5 !important;
+}
