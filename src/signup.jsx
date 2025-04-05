@@ -128,6 +128,7 @@ const Signup = () =>{
                 </Form.Item>
                 </Col>
                 </Row>
+                
                 <Divider />
                 <Row>
                     <Col xs={24} md={24}>
