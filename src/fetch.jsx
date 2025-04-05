@@ -5,7 +5,7 @@ const FetchData = () => {
     const [data,setData] = useState([]);
     const fetchUsers =async () => {
         try{
-            const res=await axios.get("http://13.203.150.86/get-data");
+            const res=await axios.get("http://13.203.150.86:5000/get-data");
             setData(res.data);
         }
         catch(err){

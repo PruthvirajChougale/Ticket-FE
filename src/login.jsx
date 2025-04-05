@@ -15,7 +15,7 @@ const Login = () =>{
         try{
         const values = {...v};
         console.log(values)
-        const res= await axios.post("http://13.203.150.86/login",values);
+        const res= await axios.post("http://13.203.150.86:5000/login",values);
         if(res){
             message.success("logged in");
         }

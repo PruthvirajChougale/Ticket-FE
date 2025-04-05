@@ -25,7 +25,7 @@ const Signup = () =>{
             try{
                 const values = {...v};
                 console.log(values);
-                const res = await axios.post("http://13.203.150.86/signup",values);
+                const res = await axios.post("http://13.203.150.86:5000/signup",values);
                 message.success("Signed up successfully");
                 navigateUser("/login");
                 console.log(res);
@@ -128,7 +128,7 @@ const Signup = () =>{
                 </Form.Item>
                 </Col>
                 </Row>
-                
+
                 <Divider />
                 <Row>
                     <Col xs={24} md={24}>
