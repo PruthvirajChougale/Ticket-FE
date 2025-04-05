@@ -1,20 +1,32 @@
-import {Row,Col, Card,Form,Input,Divider, Button} from "antd";
+import {Row,Col, Card,Form,Input,Divider, Button,message} from "antd";
 import musicImage from "./assets/music.png";
 import { Checkbox } from 'antd';
 import { useState } from "react";
 import Password from "antd/es/input/Password";
 import { useNavigate } from 'react-router-dom';
-
+import axios from "axios";
 const Login = () =>{
     const [remember, setRemember] = useState(false);
     const navigateUser = useNavigate();  
     const handleChange = (e) =>{
         setRemember(e.target.checked);
     }
-    const onLogin =  (v) =>{
-        const values = {...v,remember};
-        console.log(values);
-        navigateUser("/home");
+    const onLogin = async(v) =>{
+        try{
+        const values = {...v};
+        console.log(values)
+        const res= await axios.post("http://13.203.150.86/login",values);
+        if(res){
+            message.success("logged in");
+        }
+       
+        navigateUser("/home")
+        }
+        catch(error){
+            console.log(error.response.data.message);
+            message.error(error.response.data.message)
+           
+        }
     }
     return(
         <>
@@ -40,15 +52,16 @@ const Login = () =>{
                 <Row>
                 <Col xs={24} md={24}>
                 <Form.Item
-                name="username"
-                label={<span>Username</span>}
+                name="email"
+                label={<span>Email</span>}
                 rules={[
                     {
                         required:true,
-                        message:"Please enter your Username"
+                        message:"Please enter your Email",
+                        unique:true,
                     }
                 ]}>
-                    <Input placeholder="Username"></Input>
+                    <Input placeholder="Email"></Input>
                 </Form.Item>
                 </Col>
                 </Row>

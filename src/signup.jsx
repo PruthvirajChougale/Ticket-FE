@@ -3,7 +3,7 @@ import musicImage from "./assets/music.png";
 import { Checkbox } from 'antd';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import axios from "axios";
 const Signup = () =>{
     const [terms, setTerms] = useState(false);
     const navigateUser = useNavigate();  
@@ -11,29 +11,46 @@ const Signup = () =>{
             setTerms(e.target.checked);
             console.log(e.target.checked);
     }
-    const sendNotification = (message) => {
-		notification["error"]({
-			message: message,
-			description: "Error!",
-			placement: "bottomRight",
-			duration: 0,
-		});
-	};
+    // const sendNotification = (message) => {
+	// 	notification["error"]({
+	// 		message: message,
+	// 		description: "Error!",
+	// 		placement: "bottomRight",
+	// 		duration: 0,
+	// 	});
+	// };
     const onFinish =async(v)=>{
         try{
-            if(v.password !== v.confirmpassword){
-                sendNotification("please recheck your password!!");
-            }
-            if(terms && v.password == v.confirmpassword){
-                const values = {...v,terms};
+
+            try{
+                const values = {...v};
                 console.log(values);
-                message.success('Thank you...kindly check welcome Email!');
-                navigateUser('/login');
-            }
-            else if(!terms){
-                sendNotification("Please read and accept terms and conditions");
-            }
-            
+                const res = await axios.post("http://13.203.150.86/signup",values);
+                message.success("Signed up successfully");
+                navigateUser("/login");
+                console.log(res);
+                }
+                catch(error){
+                    console.log(error);
+                }
+            // const values = {...v};
+            // if(v.password !== v.confirmpassword){
+            //     sendNotification("please recheck your password!!");
+            // }
+            // if(terms && v.password == v.confirmpassword){
+            //     const values = {...v,terms};
+            //     console.log(values);
+            //     message.success('Thank you...kindly check welcome Email!');
+            //     navigateUser('/login');
+            // }
+            // else if(!terms){
+            //     sendNotification("Please read and accept terms and conditions");
+            // }
+            // console.log(values);
+            // const res = await axios.post("http://localhost:5000/signup",values);
+            // message.success("Signed up successfully");
+            // navigateUser("/login");
+            // console.log(res);
            
         }
         catch(error){
@@ -78,6 +95,23 @@ const Signup = () =>{
                 </Form.Item>
                 </Col>
                 </Row>
+
+                <Row>
+                <Col xs={24} md={24}>
+                <Form.Item
+                name="email"
+                label={<span>Email</span>}
+                rules={[
+                    {
+                        required:true,
+                        message:"Please enter your Email",
+                        unique:true,
+                    }
+                ]}>
+                    <Input placeholder="Email"></Input>
+                </Form.Item>
+                </Col>
+                </Row>
                
                 <Row>
                 <Col xs={24} md={24}>
@@ -91,19 +125,6 @@ const Signup = () =>{
                     },
                 ]}>
                     <Input.Password placeholder="Password"></Input.Password>
-                </Form.Item>
-                </Col>
-                <Col xs={24} md={24}>
-                <Form.Item
-                name="confirmpassword"
-                label={<span>Confirm Password</span>}
-                rules={[
-                    {
-                        required:true,
-                        message:"Please enter your Password"
-                    }
-                ]}>
-                    <Input.Password placeholder="Confirm Password"></Input.Password>
                 </Form.Item>
                 </Col>
                 </Row>
