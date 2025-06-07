@@ -7,10 +7,10 @@ import { Autoplay } from "swiper/modules";
 import axios from "axios";
 import "swiper/css";
 import "swiper/css/autoplay";
-import Swiper1 from "./assets/Slider1.png";
-import Swiper2 from "./assets/Slider2.png";
-import Swiper3 from "./assets/Slider3.png";
-import Swiper4 from "./assets/Slider4.png";
+import Swiper1 from "../public/assets/Slider1.png";
+import Swiper2 from "../public/assets/Slider2.png";
+import Swiper3 from "../public/assets/Slider3.png";
+import Swiper4 from "../public/assets/Slider4.png";
 import { useEffect, useState } from "react";
 const { useBreakpoint } = Grid;
 const Home = () => {

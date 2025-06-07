@@ -1,5 +1,5 @@
 import { Row, Col, Card, Form, Input, Divider, Button, message } from "antd";
-import ticketImage from "./assets/ticket.png";
+import ticketImage from "../public/assets/ticket.png";
 import { Checkbox } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
