@@ -33,7 +33,7 @@ const Home = () => {
 	};
 	const getMyTickets = async () => {
 		try {
-			const res = await axios.get("http://localhost:5000/get-my-tickets", {
+			const res = await axios.get("http://13.203.150.86/get-my-tickets", {
 				headers: {
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
 				},

@@ -6,8 +6,8 @@ const FetchData = () => {
 	const fetchUsers = async () => {
 		try {
 			console.log("ho");
-			//const res=await axios.get("http://13.203.150.86:5000/get-data");
-			const res = await axios.get("http://localhost:5000/get-data");
+			const res = await axios.get("http://13.203.150.86:5000/get-data");
+			//const res = await axios.get("http://localhost:5000/get-data");
 			setData(res.data);
 		} catch (err) {
 			console.log(err);
