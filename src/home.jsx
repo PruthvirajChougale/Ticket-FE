@@ -3,10 +3,10 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Col, Row, Flex, Divider, Form, Input, Button, Grid } from "antd";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+//import { Autoplay } from "swiper/modules";
 import axios from "axios";
 import "swiper/css";
-import "swiper/css/autoplay";
+//import "swiper/css/autoplay";
 import Swiper1 from "../public/assets/Slider1.png";
 import Swiper2 from "../public/assets/Slider2.png";
 import Swiper3 from "../public/assets/Slider3.png";
@@ -53,7 +53,7 @@ const Home = () => {
 		<>
 			<div style={{ height: "29rem", backgroundColor: "#f2f2f2", paddingTop: "2rem" }}>
 				<Swiper
-					modules={[Autoplay]}
+					//modules={[Autoplay]}
 					loop={true}
 					autoplay={{ delay: 2500, disableOnInteraction: false }}
 				>
