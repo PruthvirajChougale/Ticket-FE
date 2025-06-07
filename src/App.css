@@ -7,7 +7,6 @@
 }
 h1{
   display: inline;
-  margin-top:1rem;
 }
 #verse{
   color:rgb(75, 75, 246);
@@ -26,10 +25,10 @@ h1{
   box-shadow: 2px 2px 4px rgb(120, 120, 245);
 }
 h2{
-  color:rgb(75, 75, 246);
+  color:#2C3046;
 }
 Button{
-  background-color:rgb(75, 75, 246) !important ;
+  background-color:rgb(96, 96, 255) !important ;
   color: #fff !important;
   width: 100%;
 }
@@ -38,5 +37,92 @@ Button{
   padding: 0 !important;
 }
 .footer{
-  background-color: #F5F5F5 !important;
+  background-color: #2C3046 !important;
+  padding: 0 !important;
+  color: #fff;
+}
+.home{
+  /* background-image:url("./assets/homeBackground.jpg"); */
+  background-color: #f2f2f2;
+  height:auto;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+}
+.homeCard{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap:wrap;
+  width:70vw;
+  height:auto;
+  border-radius: 15px;
+  margin-top:1rem;
+  padding: 1rem;
+}
+.homeCard-ele{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height:6rem;
+  width:10rem;
+  border: none;
+}
+#search{
+  width:10rem;
+  background-color: rgb(96,96,255);
+}
+.title{
+  background-color: #f2f2f2;
+  padding-left: 15vw;
+}
+.myTicket{
+  width:40vw;
+  /* background-color: #f2f2f2; */
+  /* margin: 2.5vw 5vw 2.5vw 5vw; */
+  border-radius: 15px;
+}
+.Tickets{
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  background-color: #f2f2f2;
+}
+.flight-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+.business-div{
+  height:2rem;
+  width:2rem;
+  margin:0.5rem;
+  /* background-color: rgb(96, 96, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.flight-details{
+  margin-top: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+#deals{
+  width:100%;
+  background-color: #fff;
+}
+#deals table{
+  width:100%;
+}
+#deals table thead{
+  background-color:rgb(75, 75, 246) !important;
+}
+@media (max-width:915px){
+  #search{
+    width:7rem;
+  }
 }
