@@ -16,7 +16,7 @@ const Login = () => {
 		try {
 			const values = { ...v };
 			console.log(values);
-			const res = await axios.post("http://13.203.150.86:5000/login", values);
+			const res = await axios.post("http://43.205.87.196:5000/login", values);
 			if (res) {
 				message.success("logged in");
 				console.log(res.data.jwtToken);

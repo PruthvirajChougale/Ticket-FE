@@ -44,7 +44,7 @@ const BookFlight = () => {
 	useEffect(() => {
 		const fetchedTickets = async () => {
 			console.log("fr", from, to);
-			const res = await axios.get("http://13.203.150.86:5000/get-tickets", {
+			const res = await axios.get("http://43.205.87.196:5000/get-tickets", {
 				params: { from, to },
 			});
 			const bookedTicketID = res.data.ticketID;
@@ -97,7 +97,7 @@ const BookFlight = () => {
 				destination: to,
 			};
 			console.log(values);
-			const res = await axios.post("http://13.203.150.86:5000/book-flight", values, {
+			const res = await axios.post("http://43.205.87.196:5000/book-flight", values, {
 				headers: {
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
 				},

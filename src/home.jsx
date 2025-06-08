@@ -2,15 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Col, Row, Flex, Divider, Form, Input, Button, Grid } from "antd";
-//import { Swiper, SwiperSlide } from "swiper/react";
-//import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import axios from "axios";
-//import "swiper/css";
-//import "swiper/css/autoplay";
-// import Swiper1 from "../public/assets/Slider1.png";
-// import Swiper2 from "../public/assets/Slider2.png";
-// import Swiper3 from "../public/assets/Slider3.png";
-// import Swiper4 from "../public/assets/Slider4.png";
+import "swiper/css";
+import "swiper/css/autoplay";
+import Swiper1 from "../public/assets/Slider1.png";
+import Swiper2 from "../public/assets/Slider2.png";
+import Swiper3 from "../public/assets/Slider3.png";
+import Swiper4 from "../public/assets/Slider4.png";
 
 import { useEffect, useState } from "react";
 const { useBreakpoint } = Grid;
@@ -34,7 +34,7 @@ const Home = () => {
 	};
 	const getMyTickets = async () => {
 		try {
-			const res = await axios.get("http://13.203.150.86/get-my-tickets", {
+			const res = await axios.get("http://43.205.87.196:5000/get-my-tickets", {
 				headers: {
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
 				},
@@ -53,8 +53,8 @@ const Home = () => {
 	return (
 		<>
 			<div style={{ height: "29rem", backgroundColor: "#f2f2f2", paddingTop: "2rem" }}>
-				{/* <Swiper
-					//modules={[Autoplay]}
+				<Swiper
+					modules={[Autoplay]}
 					loop={true}
 					autoplay={{ delay: 2500, disableOnInteraction: false }}
 				>
@@ -82,7 +82,7 @@ const Home = () => {
 							style={{ width: "100vw", height: "25rem", objectFit: "cover" }}
 						/>
 					</SwiperSlide>
-				</Swiper> */}
+				</Swiper>
 			</div>
 			{/* <Divider style={{margin:"0",borderColor:"black"}}/> */}
 			<Row className="title">
