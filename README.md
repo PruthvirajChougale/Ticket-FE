@@ -1,13 +1,13 @@
 TicketEasy is a flight ticket booking platform and it has two separate repositories:
-Ticket-FE (frontend)
+Ticket-FE (frontend), 
 Ticket-BE (backend)
 
 Tech Stack:
-Frontend: ReactJS
-Backend: NodeJS, ExpressJS
-Database: MongoDB
-Authentication: JWT(JSON Web Tokens), bcrypt
-Real-time Communication: Socket.IO
+Frontend: ReactJS,
+Backend: NodeJS, ExpressJS,
+Database: MongoDB,
+Authentication: JWT(JSON Web Tokens), bcrypt,
+Real-time Communication: Socket.IO,
 Deployment: AWS(Amazon Web Sevices)
 
 
@@ -19,7 +19,7 @@ Usage:
 User can create an account using signup or directly access website through the test credentials.
 
 Test Credentials:
-email: ticket3@gmail.com
+email: ticket3@gmail.com,
 password: 123456
 
 
