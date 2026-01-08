@@ -16,6 +16,7 @@ const Signup = () => {
 			try {
 				const values = { ...v };
 				console.log(values);
+
 				const res = await axios.post("https://isrogeonli.in/signup", values);
 				message.success("Signed up successfully");
 				navigateUser("/login");

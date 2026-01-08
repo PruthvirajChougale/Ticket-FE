@@ -16,6 +16,7 @@ const Login = () => {
 		try {
 			const values = { ...v };
 			console.log(values);
+
 			const res = await axios.post("https://isrogeonli.in/login", values);
 			if (res) {
 				message.success("logged in");

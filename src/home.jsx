@@ -32,6 +32,7 @@ const Home = () => {
 	const handleFlight = async (v) => {
 		navigateUser(`/${updateCapital(v.start)}-${updateCapital(v.destination)}`);
 	};
+
 	const getMyTickets = async () => {
 		try {
 			const res = await axios.get("https://isrogeonli.in/get-my-tickets", {

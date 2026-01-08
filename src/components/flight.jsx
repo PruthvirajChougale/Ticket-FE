@@ -44,6 +44,7 @@ const BookFlight = () => {
 	useEffect(() => {
 		const fetchedTickets = async () => {
 			console.log("fr", from, to);
+
 			const res = await axios.get("https://isrogeonli.in/get-tickets", {
 				params: { from, to },
 			});
