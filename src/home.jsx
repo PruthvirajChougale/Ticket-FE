@@ -34,7 +34,7 @@ const Home = () => {
 	};
 	const getMyTickets = async () => {
 		try {
-			const res = await axios.get("http://43.205.87.196:5000/get-my-tickets", {
+			const res = await axios.get("https://isrogeonli.in/get-my-tickets", {
 				headers: {
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
 				},

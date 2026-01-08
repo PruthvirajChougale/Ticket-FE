@@ -44,7 +44,7 @@ const BookFlight = () => {
 	useEffect(() => {
 		const fetchedTickets = async () => {
 			console.log("fr", from, to);
-			const res = await axios.get("http://43.205.87.196:5000/get-tickets", {
+			const res = await axios.get("https://isrogeonli.in/get-tickets", {
 				params: { from, to },
 			});
 			const bookedTicketID = res.data.ticketID;

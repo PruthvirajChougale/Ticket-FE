@@ -16,7 +16,7 @@ const Login = () => {
 		try {
 			const values = { ...v };
 			console.log(values);
-			const res = await axios.post("http://43.205.87.196:5000/login", values);
+			const res = await axios.post("https://isrogeonli.in/login", values);
 			if (res) {
 				message.success("logged in");
 				console.log(res.data.jwtToken);
