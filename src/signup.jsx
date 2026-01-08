@@ -17,7 +17,7 @@ const Signup = () => {
 				const values = { ...v };
 				console.log(values);
 
-				const res = await axios.post("https://isrogeonli.in/signup", values);
+				const res = await axios.post("https://api.isrogeonli.in/signup", values);
 				message.success("Signed up successfully");
 				navigateUser("/login");
 				console.log(res);
